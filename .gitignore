@@ -2,20 +2,20 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+AR-animal-chatbot/[Ll]ibrary/
+AR-animal-chatbot/[Tt]emp/
+AR-animal-chatbot/[Oo]bj/
+AR-animal-chatbot/[Bb]uild/
+AR-animal-chatbot/[Bb]uilds/
+AR-animal-chatbot/[Ll]ogs/
+AR-animal-chatbot/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
-/[Mm]emoryCaptures/
+AR-animal-chatbot/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
+!AR-animal-chatbot/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
