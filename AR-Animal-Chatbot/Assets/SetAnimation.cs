@@ -63,8 +63,8 @@ public class SetAnimation : MonoBehaviour
             humanJoint[3] = animator.GetBoneTransform(HumanBodyBones.LeftUpperLeg);
             humanJoint[4] = animator.GetBoneTransform(HumanBodyBones.LeftLowerLeg);
             humanJoint[5] = animator.GetBoneTransform(HumanBodyBones.LeftFoot);
-            humanJoint[6] = animator.GetBoneTransform(HumanBodyBones.Spine);
-            humanJoint[7] = animator.GetBoneTransform(HumanBodyBones.UpperChest);
+            humanJoint[6] = animator.GetBoneTransform(HumanBodyBones.Hips);
+            humanJoint[7] = animator.GetBoneTransform(HumanBodyBones.Chest);
             humanJoint[8] = animator.GetBoneTransform(HumanBodyBones.Neck);
             humanJoint[9] = animator.GetBoneTransform(HumanBodyBones.Head);
             humanJoint[10] = animator.GetBoneTransform(HumanBodyBones.RightHand);
@@ -76,13 +76,6 @@ public class SetAnimation : MonoBehaviour
         }
 
         jsonAnim = LoadJsonFile<JsonData>(Application.dataPath, "InfoJsonAnim");
-        /*
-        for (int i = 0; i < jsonAnim.categories.Length; i++)
-            Debug.Log(jsonAnim.annotations[i].keypoints[0]);
-        */
-
-        //jsonAnim.annotations.Length = 18
-
     }
 
 
@@ -92,7 +85,7 @@ public class SetAnimation : MonoBehaviour
     {
         if (Time.time > t)
         {
-            t = Time.time + 1.0f/24;
+            t = Time.time + 1.0f/10;
             setBoneTransform();
         }
     }
@@ -124,7 +117,7 @@ public class SetAnimation : MonoBehaviour
             float rot_z = jsonAnim.annotations[frame].keypoints[i * 6 + 5];
             
             Vector3 pos = new Vector3(x, y, z);
-            humanJoint[i].position = pos * 0.01f;
+            humanJoint[i].position = pos*0.02f;
 
             Quaternion rot = Quaternion.Euler(rot_x, rot_y, rot_z);
             humanJoint[i].rotation = rot;
