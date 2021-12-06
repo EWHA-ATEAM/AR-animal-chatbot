@@ -52,8 +52,6 @@ public class SetAnimation : MonoBehaviour
 
     void Start()
     {
-        // 사람 Object의 Animator 가져오기
-        animator = GetComponent<Animator>();
         if (animator)
         {
             // 아바타의 bone transforms을 가져옴
